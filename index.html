@@ -4,19 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+
     <title>Gym To do</title>
   </head>
   <body>
     <div class="container">
       <div class="tools-box">
-        <div class="title"><h1>Gym to-do</h1></div>
-        <div class="user-name">"Nome de usuario"</div>
+        <div class="title"><h1>(Gym to-do)</h1></div>
+        <div class="user-name"></div>
         <div class="add-task">
-          <button class="btn-add-task">Adicionar</button>
+          <button class="btn-add-task">
+            <img src=img/btn-icon-add-task.png /> Adicionar tarefa
+          </button>
+          <div class="modal-window-task" id="modal-window-task">
+            <div class="modal">
+              <button class="close-modal" id="close-modal">X</button>
+              <input class="input-fild-task" type="text" id="inputText" placeholder="Nome da tarefa">
+              <button onclick="submitText()">Enviar</button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="todolist-box">
-        <h1></h1>
+        <div class="to-do-tittle"><h1>Tarefas</h1></div>
+        <div class="tasks"></div>
       </div>
     </div>
     <script src="script.js"></script>

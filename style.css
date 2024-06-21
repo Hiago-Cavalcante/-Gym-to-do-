@@ -6,32 +6,90 @@
 }
 
 body {
-  background-color: rgb(196, 188, 187);
+  background-color: rgb(219, 207, 206);
 }
 
 .container {
   display: flex;
   margin: 16px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(37, 35, 35);
   border-radius: 23px;
-  border: 2px solid #d5d4dd;
-  
+  border: 1px solid rgb(22, 22, 22);
 }
 
 .tools-box {
   width: 15%;
   height: 100vh;
   display: block;
-
 }
 
 .title {
   width: 250px;
   height: 50px;
-  background-color: #ffffff;
-  border-radius: 20px;
+  background-color: rgb(37, 35, 35);
   margin: 10px;
   text-align: center;
-  color: #070707;
+  color: #ffffff;
   font-size: 20px;
+}
+
+.btn-add-task {
+  display: flex;
+  background: transparent;
+  color: #f9f9fc;
+  font-size: 20px;
+  border-color: transparent;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.btn-add-task img {
+  width: 26px;
+  height: 26px;
+  margin-right: 4px;
+  color: #ffffff;
+}
+.modal-window-task{
+width: 100vw;
+height: 100vh;
+background-color:  rgb(37, 35, 35);
+top: 0;
+left: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 2000;
+}
+.modal{
+  width: 40%;
+  min-height: 200px;
+  min-width: 450px;
+  background-color: #3b3939;
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  border-radius: 23px;
+  padding: 50px
+}
+.close-modal{
+  position: absolute;
+  top: -8px;
+  right: -8
+  px;
+  width: 25px;
+  height:25px ;
+  border-radius: 50%;
+  border: none;
+  background-color: orangered;
+  color: #ffffff;
+  font-size: 14px;
+  
+}
+
+.to-do-tittle {
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  padding-top: 50px;
+  padding-left: 60px;
 }
