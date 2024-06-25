@@ -50,18 +50,23 @@ body {
   margin-right: 4px;
   color: #ffffff;
 }
-.modal-window-task{
-width: 100vw;
-height: 100vh;
-background-color:  rgb(37, 35, 35);
-top: 0;
-left: 0;
-display: flex;
-align-items: center;
-justify-content: center;
-z-index: 2000;
+.modal-window-task {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
 }
-.modal{
+.modal-window-task.openModal {
+  display: flex;
+}
+
+.modal {
   width: 40%;
   min-height: 200px;
   min-width: 450px;
@@ -69,21 +74,68 @@ z-index: 2000;
   backdrop-filter: blur(10px);
   color: #ffffff;
   border-radius: 23px;
-  padding: 50px
+  padding: 50px;
 }
-.close-modal{
+.btn-close-modal {
   position: absolute;
   top: -8px;
-  right: -8
-  px;
+  right: -8px;
   width: 25px;
-  height:25px ;
+  height: 25px;
   border-radius: 50%;
   border: none;
   background-color: orangered;
   color: #ffffff;
   font-size: 14px;
-  
+  cursor: pointer;
+}
+
+.input-fild-task {
+  position: ce;
+  width: 300px;
+  height: 50px;
+  border: none;
+  font-size: x-large;
+  color: #fffdfd;
+  font-family: 'Inter', sans-serif;
+  background: transparent;
+}
+input::placeholder {
+  color: #a8a3a3;
+}
+input:focus {
+  border: none;
+  outline: none;
+}
+.save-task-modal {
+  position: absolute;
+  width: 140px;
+  height: 30px;
+  top: 140px;
+  right: 100px;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+.save-task-modal:hover {
+  color: orangered;
+  border-radius: 10px;
+}
+@keyframes openModal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 5px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.openModal.modal {
+  animation: openModal 0.5s;
 }
 
 .to-do-tittle {
