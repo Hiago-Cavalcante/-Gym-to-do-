@@ -12,5 +12,12 @@ const openFormModal = document
         e.target.id == 'modal-window-task'
       )
         modal.classList.remove('openModal');
+
+      const inputs = modal.querySelectorAll(
+        'input[type="text"], input[type="number"], textarea'
+      );
+      inputs.forEach(input => (input.value = ''));
     });
   });
+
+const listContainer = document.getElementById('list-container');

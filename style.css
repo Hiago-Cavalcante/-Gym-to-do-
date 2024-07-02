@@ -26,11 +26,11 @@ body {
 .title {
   width: 250px;
   height: 50px;
-  background-color: rgb(37, 35, 35);
+  background-color: transparent;
   margin: 10px;
   text-align: center;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .btn-add-task {
@@ -91,7 +91,7 @@ body {
 }
 
 .input-fild-task {
-  position: ce;
+  position: absolute;
   width: 300px;
   height: 50px;
   border: none;
@@ -144,4 +144,34 @@ input:focus {
   color: #ffffff;
   padding-top: 50px;
   padding-left: 60px;
+}
+
+ul li{
+  list-style: none;
+  font-size: 20px;
+  padding: 30px 10px 30px 200px;
+  user-select: none;
+  cursor: pointer;
+  color: #fffdfd;
+  position: relative;
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-size: cover;
+  background-image: url(img/images/unchecked.png) ;
+  background-position: center;
+  left: 150px;
+}
+
+ui li.checked{
+  color: #ffffff;
+  text-decoration: line-through;
+}
+
+ui li.checked::before{
+background-image: url(img/images/checked.png);
 }

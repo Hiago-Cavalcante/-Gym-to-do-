@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
 
-    <title>Gym To do</title>
+    <title>🦾 Gym To-do</title>
   </head>
   <body>
     <div class="container">
       <div class="tools-box">
-        <div class="title"><h1>(Gym to-do)</h1></div>
+        <div class="title"><h1>(🦾Gym to-do)</h1></div>
         <div class="user-name"></div>
         <div class="add-task">
           <button class="btn-add-task">
@@ -20,12 +20,18 @@
       </div>
       <div class="todolist-box">
         <div class="to-do-tittle"><h1>Tarefas</h1></div>
-        <div class="tasks"></div>
+        <div class="tasks">
+          <ul id="list-container">
+            <li class="checked">tasks 1...</li>
+            <li>tasks 2...</li>
+            <li>tasks 3...</li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="modal-window-task" id="modal-window-task">
       <div class="modal">
-        <button class="btn-close-modal" id="close-modal">X</button>
+        <button class="btn-close-modal" id="btn-close-modal">X</button>
         <input
           class="input-fild-task"
           type="text"
